@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Play tetris iccang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>&#127918 PLAY TETRIS &#127918</h1>
+  <div class="score-container">
+    <div id="score">SCORE: 0</div>
+    <div id="topScore">Skor Tertinggi: 0</div>
+  </div>
+
+  <div class="game-container">
+    <video class="game-video" autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <canvas id="tetris" width="1080" height="800"></canvas>
+
+    <div class="music-toggle-tab">
+      <button type="button" id="musicOffBtn">&#128264;</button>
+      <button type="button" id="musicOnBtn">&#128266;</button>
+    </div>
+
+    <div class="overlay" id="gameOverOverlay" >
+      <div>GAME OVER</div>
+      <button id="reloadBtn">Coba Lagi</button>
+    </div>
+
+    <button id="playButton">PLAY</button>
+  </div>
+
+  <div class="controls">
+    <button id="btnLeft" disabled>&#9194</button>
+    <button id="btnRotate" disabled>&#128260</button>
+    <button id="btnRight" disabled>&#9193</button>
+  </div>
+  <button id="btnDown" disabled>&#9196</button>
+
+  <audio id="bgMusic" loop>
+    <source src="bg-music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
